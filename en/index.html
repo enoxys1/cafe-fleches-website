@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Café Fléchés — French arrow-word puzzles</title>
+  <meta name="description" content="French arrow-word (mots fléchés) puzzles for iPhone, iPad and Android. Three grid sizes, three difficulty levels, a daily challenge and 604 puzzles built in. Offline, no account.">
+  <link rel="icon" type="image/png" href="/cafe-fleches/assets/favicon.png">
+  <link rel="stylesheet" href="/cafe-fleches/css/style.css">
+</head>
+<body>
+
+  <header class="header">
+    <div class="header-inner">
+      <a href="/cafe-fleches/en/" class="logo">
+        <img src="/cafe-fleches/assets/logo.png" alt="" class="logo-img">
+        <span class="logo-text">Café Fléchés</span>
+      </a>
+      <button class="menu-toggle" aria-label="Menu" aria-expanded="false">☰</button>
+      <nav class="nav">
+        <a href="/cafe-fleches/en/">The game</a>
+        <a href="/cafe-fleches/en/privacy">Privacy</a>
+        <a href="/cafe-fleches/en/terms">Terms</a>
+        <a href="/cafe-fleches/en/contact">Contact</a>
+        <a href="/cafe-fleches/" class="lang-switch" hreflang="fr"><svg class="flag" viewBox="0 0 30 20" width="16" height="10" aria-hidden="true"><rect width="10" height="20" fill="#002395"/><rect x="10" width="10" height="20" fill="#fff"/><rect x="20" width="10" height="20" fill="#ED2939"/></svg> FR</a>
+      </nav>
+    </div>
+  </header>
+  <div class="nav-overlay"></div>
+
+  <!-- Hero -->
+  <section class="hero">
+    <img src="/cafe-fleches/assets/logo.png" alt="Café Fléchés" class="hero-logo">
+    <h1>Café Fléchés</h1>
+    <p class="subtitle">Arrow-word puzzles, newsstand style</p>
+    <p class="description">French <em>mots fléchés</em> to solve the way you would at the counter of a café: one grid, one coffee, ten minutes to yourself. The clues sit inside the squares, the arrows give the direction, the words cross — exactly like in the newspaper.</p>
+    <div class="hero-badges">
+      <span class="store-badge">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.8-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.03.07-.42 1.44-1.38 2.83M13 3.5c.73-.83 1.94-1.46 2.94-1.5.13 1.17-.34 2.35-1.04 3.19-.69.85-1.83 1.51-2.95 1.42-.15-1.15.41-2.35 1.05-3.11z"/></svg>
+        <span>App Store<span class="badge-soon">Coming soon</span></span>
+      </span>
+      <span class="store-badge">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M3.6 2.2c-.3.3-.5.8-.5 1.4v16.8c0 .6.2 1.1.5 1.4l.1.1 9.4-9.4v-.2L3.6 2.2zM17 15.4l-3.1-3.1 3.1-3.1 3.7 2.1c1.1.6 1.1 1.6 0 2.2L17 15.4zM13.9 12.3l3.2 3.2-9.5 5.4c-.6.3-1.2.3-1.6-.1l7.9-8.5zM13.9 11.7L6 3.2c.4-.4 1-.4 1.6-.1l9.5 5.4-3.2 3.2z"/></svg>
+        <span>Google Play<span class="badge-soon">Coming soon</span></span>
+      </span>
+    </div>
+  </section>
+
+  <!-- Screenshots -->
+  <section class="section">
+    <h2 class="section-title">The app</h2>
+    <p class="section-intro">A front page like a newspaper's, a crisp grid, and a win worth savouring.</p>
+    <div class="screenshots fade-in">
+      <figure class="shot">
+        <img src="/cafe-fleches/assets/shot_accueil.png" alt="Café Fléchés home screen: daily challenge and grid size picker" width="600" height="1304" loading="lazy">
+        <span>The daily challenge is waiting</span>
+      </figure>
+      <figure class="shot">
+        <img src="/cafe-fleches/assets/shot_jeu.png" alt="An arrow-word grid being filled in, with the clue banner and the keyboard" width="600" height="1304" loading="lazy">
+        <span>Clues in the squares, arrows and a French keyboard</span>
+      </figure>
+      <figure class="shot">
+        <img src="/cafe-fleches/assets/shot_victoire.png" alt="Completion screen showing the time and statistics for the finished grid" width="600" height="1304" loading="lazy">
+        <span>Grid finished, streak kept alive</span>
+      </figure>
+    </div>
+  </section>
+
+  <!-- Sizes -->
+  <section class="section">
+    <h2 class="section-title">Three sizes, for the time you have</h2>
+    <p class="section-intro">The size sets how big the grid is, and therefore how long the session lasts. It is chosen independently from the difficulty.</p>
+    <div class="card-grid fade-in">
+      <article class="card">
+        <span class="card-meta">8 × 8</span>
+        <h3>Mini</h3>
+        <p>About twenty words, the length of an espresso. 5 to 10 minutes.</p>
+      </article>
+      <article class="card">
+        <span class="card-meta">10 × 10</span>
+        <h3>Classique</h3>
+        <p>The traditional newspaper size, around 35 words. 10 to 20 minutes.</p>
+      </article>
+      <article class="card">
+        <span class="card-meta">13 × 13</span>
+        <h3>Grande</h3>
+        <p>The big weekend grid, around 60 words. 20 to 40 minutes.</p>
+      </article>
+    </div>
+  </section>
+
+  <!-- Difficulty -->
+  <section class="section">
+    <h2 class="section-title">Three clue difficulties</h2>
+    <p class="section-intro">Grid size and clue difficulty are set separately, the way a puzzle magazine does it.</p>
+    <div class="card-grid fade-in">
+      <article class="card">
+        <span class="card-meta">Level 1</span>
+        <h3>Direct clues</h3>
+        <p>The thing is named plainly. To get started, or for a quiet grid at the counter.</p>
+      </article>
+      <article class="card">
+        <span class="card-meta">Level 2</span>
+        <h3>Richer vocabulary</h3>
+        <p>Rarer words and tighter phrasing, with no gratuitous traps.</p>
+      </article>
+      <article class="card">
+        <span class="card-meta">Level 3</span>
+        <h3>Allusive clues</h3>
+        <p>Wordplay, double meanings, the clue you have to earn.</p>
+      </article>
+    </div>
+  </section>
+
+  <!-- Figures -->
+  <section class="section">
+    <h2 class="section-title">What is already in the app</h2>
+    <div class="specs-strip fade-in">
+      <div class="spec-item">
+        <span class="spec-value">604</span>
+        <span class="spec-label">Puzzles included</span>
+      </div>
+      <div class="spec-item">
+        <span class="spec-value">3 × 3</span>
+        <span class="spec-label">Sizes × levels</span>
+      </div>
+      <div class="spec-item">
+        <span class="spec-value">1 / day</span>
+        <span class="spec-label">Daily challenge</span>
+      </div>
+      <div class="spec-item">
+        <span class="spec-value">0</span>
+        <span class="spec-label">Accounts to create</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- Features -->
+  <section class="section">
+    <div class="feature fade-in">
+      <div class="feature-content">
+        <h2>The daily challenge, and your streak</h2>
+        <p>Every morning a Classique grid is waiting on the home screen, like the newspaper puzzle. Finish it within the day to keep your streak alive.</p>
+        <p>The app keeps your notebook: grids completed, current streak, best streak, average time per size. Everything is counted on your device, and published nowhere.</p>
+      </div>
+      <div class="feature-visual">
+        <img src="/cafe-fleches/assets/shot_accueil.png" alt="Home screen with the daily challenge and the streak counter" width="600" height="1304" loading="lazy">
+      </div>
+    </div>
+
+    <div class="feature reverse fade-in">
+      <div class="feature-content">
+        <h2>Typing that never gets in your way</h2>
+        <ul>
+          <li>The cursor skips squares that are already filled</li>
+          <li>A completed word moves you straight on to the next one</li>
+          <li>Tapping the current square switches between across and down</li>
+          <li>Built-in French keyboard with large keys</li>
+          <li>Every session resumes exactly where you left it</li>
+        </ul>
+        <p>Both automatic behaviours can be turned off in the settings if you would rather move square by square.</p>
+      </div>
+      <div class="feature-visual">
+        <img src="/cafe-fleches/assets/shot_jeu.png" alt="A grid in progress with the clue banner and the in-app keyboard" width="600" height="1304" loading="lazy">
+      </div>
+    </div>
+
+    <div class="feature fade-in">
+      <div class="feature-content">
+        <h2>Genuinely readable</h2>
+        <p>The game is designed to be read without effort, including by tired eyes.</p>
+        <ul>
+          <li>Clue text size adjustable up to ×1.6, on top of your system text size</li>
+          <li>High contrast mode: thicker borders, bolder colours</li>
+          <li>Large clue banner above the keyboard</li>
+          <li>Pinch to zoom, double tap to see the whole grid again</li>
+          <li>Light, dark or automatic theme</li>
+          <li>VoiceOver on iPhone and iPad, TalkBack on Android: every square is announced</li>
+        </ul>
+      </div>
+      <div class="feature-visual">
+        <img src="/cafe-fleches/assets/shot_victoire.png" alt="End-of-grid screen" width="600" height="1304" loading="lazy">
+      </div>
+    </div>
+
+    <div class="feature reverse fade-in">
+      <div class="feature-content">
+        <h2>Quiet by default</h2>
+        <p>No account, no sign-up. Your grids, your progress and your settings stay on your device, and everything works offline: on a train, on a plane, deep in the countryside.</p>
+        <p>No advertising ever interrupts a session. One hint is free per grid; if you want another one, the game <em>offers</em> to let you watch a short video — the decision is yours, and the advertising consent form is shown only at that moment. If the video is unavailable, the hint is granted anyway.</p>
+        <p><a href="/cafe-fleches/en/privacy">Read the privacy policy</a></p>
+      </div>
+      <div class="feature-visual">
+        <img src="/cafe-fleches/assets/logo.png" alt="" width="512" height="512" loading="lazy">
+      </div>
+    </div>
+  </section>
+
+  <!-- Premium -->
+  <section class="section">
+    <h2 class="section-title">Premium — once, €2.99</h2>
+    <p class="section-intro">No subscription, no renewal. A single purchase, handled by the App Store or Google Play, restorable on your other devices signed in to the same account.</p>
+    <div class="premium fade-in">
+      <span class="price">€2.99 — one-off purchase</span>
+      <ul>
+        <li>Unlimited hints</li>
+        <li>No advertising at all, never offered again</li>
+        <li>Three extra grid styles: Newsprint, Night and Nature</li>
+        <li>The full solution, when a grid really will not give in</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="cta">
+    <h2>Pour yourself a coffee, open a grid</h2>
+    <p>Coming soon to iPhone, iPad and Android. Rated 4+ / PEGI 3.</p>
+  </section>
+
+  <footer class="footer">
+    <div class="footer-inner">
+      <span class="footer-copy">© 2026 Enoxys. All rights reserved.</span>
+      <div class="footer-links">
+        <a href="/">Our apps</a>
+        <a href="/cafe-fleches/en/privacy">Privacy</a>
+        <a href="/cafe-fleches/en/terms">Terms</a>
+        <a href="/cafe-fleches/en/contact">Contact</a>
+        <a href="mailto:contact@enoxys.fr">contact@enoxys.fr</a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="/cafe-fleches/js/main.js"></script>
+</body>
+</html>
