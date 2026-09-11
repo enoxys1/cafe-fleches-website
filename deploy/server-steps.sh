@@ -171,6 +171,8 @@ sudo docker exec "$NGINX_CTR" nginx -s reload
 # (f) Vérifications
 # ==================================================================
 # Toutes les lignes doivent afficher 200.
+# `-L` suit la redirection : comme pour /fracture, nginx renvoie un 301 de
+# /cafe-fleches vers /cafe-fleches/ (alias + index sur un répertoire).
 for u in \
   https://enoxys.fr/ \
   https://enoxys.fr/cafe-fleches \
@@ -185,7 +187,7 @@ for u in \
   https://enoxys.fr/cafe-fleches/assets/logo.png \
   https://enoxys.fr/assets/banner_cafe-fleches.png
 do
-  printf '%-58s %s\n' "$u" "$(curl -s -o /dev/null -w '%{http_code}' "$u")"
+  printf '%-58s %s\n' "$u" "$(curl -sL -o /dev/null -w '%{http_code}' "$u")"
 done
 
 # La carte doit être servie par l'API du hub :
