@@ -17,6 +17,9 @@ En ligne (une fois déployé) : <https://enoxys.fr/cafe-fleches>
 | `en/privacy.html` | `/cafe-fleches/en/privacy` |
 | `en/terms.html` | `/cafe-fleches/en/terms` |
 | `en/contact.html` | `/cafe-fleches/en/contact` |
+| `grille-du-jour.html` | `/cafe-fleches/grille-du-jour` |
+| `defi.html` | `/cafe-fleches/defi` (redirection vers la grille du jour, lien de partage de l'app) |
+| `en/daily.html` | `/cafe-fleches/en/daily` |
 
 Les liens internes sont écrits **sans extension** : nginx résout `$uri.html`
 (voir la directive `try_files` ci-dessous), comme pour les sites Fracture et
@@ -27,6 +30,10 @@ css/style.css     direction artistique (papier crème, ambre, chocolat)
 js/main.js        menu mobile, apparition au défilement, lien de nav actif
 assets/           logo 512 px, favicon 64 px, 3 captures 600 px de large
 deploy/           script des commandes à lancer sur le serveur
+js/daily.js       grille du jour : choix de l'image selon la date à Paris
+assets/daily/     images de la grille du jour (120 jours), og-latest.png, manifest.json
+tools/            render_grid.py (rendu PNG d'une grille), gen_daily.sh
+promo/            kit de promotion (messages, kit presse, images 1200×630)
 ```
 
 ## Principes
@@ -50,6 +57,21 @@ mkdir -p /tmp/preview/cafe-fleches && cp -R . /tmp/preview/cafe-fleches/
 cd /tmp/preview && python3 -m http.server 8000
 # → http://localhost:8000/cafe-fleches/
 ```
+
+## Grille du jour
+
+Les images `assets/daily/AAAA-MM-JJ.png` couvrent 120 jours à partir de leur
+génération (règle de l'app : `classique_{(jour_de_l_année % 100) + 1}`).
+**À relancer tous les 3 mois**, puis commit + push + `git pull` sur le serveur :
+
+```sh
+tools/gen_daily.sh            # Python 3 + Pillow ; lit les grilles et les
+                              # polices dans /Applications/CafeFleches/cafe_fleches
+```
+
+Au-delà de la dernière date générée, la page affiche la dernière image
+disponible avec un avertissement. `tools/render_grid.py --help` pour le rendu
+d'une grille isolée (vide, résolue, format réseaux sociaux).
 
 ## Déploiement
 
