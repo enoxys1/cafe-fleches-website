@@ -1,11 +1,8 @@
-/* Grille du jour : choisit l'image du défi selon la date à Paris.
+/* Grille du jour : choisit l'image du défi selon la date civile à Paris.
  *
- * Même calcul que l'app (home_state.dart, `_dayOfYear()`) :
- *   DateTime.now().difference(DateTime(année, 1, 1)).inDays + 1
- * `difference` mesure une durée réelle : à l'heure d'été, entre 0 h et 1 h,
- * elle compte une heure de moins que l'horloge, et l'app affiche encore le
- * défi de la veille. On reproduit ce comportement pour montrer la même
- * grille que l'application.
+ * Même règle que l'app depuis la 2.1 (home_state.dart, `dayOfYearOf`) :
+ * le jour de l'année est calculé sur la date seule, sans les heures, donc
+ * le défi change à minuit toute l'année.
  *
  * Images : assets/daily/AAAA-MM-JJ.png, liste dans assets/daily/manifest.json
  * (tools/gen_daily.sh). Image absente : repli sur la dernière disponible.
@@ -31,19 +28,9 @@
     return out;
   }
 
-  // Décalage de Paris par rapport à UTC à l'instant d, en ms.
-  function offsetMs(d) {
-    var p = parisParts(d);
-    var wall = Date.UTC(p.year, p.month - 1, p.day, p.hour, p.minute, p.second);
-    return wall - Math.floor(d.getTime() / 1000) * 1000;
-  }
-
   function challengeDate(now) {
-    var year = parisParts(now).year;
-    var jan1Utc = Date.UTC(year, 0, 1);
-    var jan1Instant = jan1Utc - offsetMs(new Date(jan1Utc));
-    var days = Math.floor((now.getTime() - jan1Instant) / 86400000);
-    return new Date(jan1Utc + days * 86400000).toISOString().slice(0, 10);
+    var p = parisParts(now);
+    return p.year + '-' + String(p.month).padStart(2, '0') + '-' + String(p.day).padStart(2, '0');
   }
 
   function label(iso) {
